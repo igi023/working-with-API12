@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+const API_KEY = '6648c884';
+//http://www.omdbapi.com/t=terminator&apikey=6648c884
 
 
 
