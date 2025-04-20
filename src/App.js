@@ -1,5 +1,10 @@
 
 import Movies from './components/movies';
+import Navigation from './Templates/Snippets/Navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 
 
@@ -8,6 +13,7 @@ import Movies from './components/movies';
 function App() {
   return (
     <>
+    <Navigation />
     <Movies />
 
     </>

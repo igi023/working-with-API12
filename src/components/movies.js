@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import MovieCard from "../Templates/Snippets";
-
-
+import MovieCard from "../Templates/Snippets/MovieCard";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Movies = () => {
 
-  const[searchMovieName,SetSearchMovieName] = useState('Harry potter');
+  const[searchMovieName,SetSearchMovieName] = useState('');
   const[MovieData,SetMovieData] =useState([]);
 
 
@@ -23,7 +22,7 @@ const Movies = () => {
           );
           SetMovieData(filtered);
         } else {
-          SetMovieData([]); // Ako nema rezultata
+          SetMovieData([]); 
         }
       })
       .catch(error => {
@@ -34,14 +33,16 @@ const Movies = () => {
   
 
     return (
-      <>
-      <form onSubmit={e=>e.preventDefault}>
-        <input type="text" onInput={e =>SetSearchMovieName(e.currentTarget.value)} />
-        <button onClick={buttonClick} type="button">Search for movie</button>
+    <>
+      <div >
+        <form onSubmit={e=>e.preventDefault()}>
+          <input type="text" onInput={e =>SetSearchMovieName(e.currentTarget.value)} />
+          <button onClick={buttonClick} type="button">Search for movie</button>
 
-        <MovieCard movies={MovieData} />
-      </form>  
-      </>
+          <MovieCard movies={MovieData} />
+        </form>
+      </div>    
+    </>
     );
   };
   
