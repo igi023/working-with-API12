@@ -7,9 +7,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigation = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-dark ">
       <Container>
-        <Navbar.Brand href="#">My Movies</Navbar.Brand>
+        <Navbar.Brand className='text-light' href="#">Igor-Movies</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,10 +17,10 @@ const Navigation = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">COMEDY</Nav.Link>
-            <NavDropdown title="Another" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Newest</NavDropdown.Item>
+            <Nav.Link  className='text-light'href="#action1">Home</Nav.Link>
+            <Nav.Link className='text-light' href="#action2">COMEDY</Nav.Link>
+            <NavDropdown className='bg-success rounded' title="Another" id="navbarScrollingDropdown">
+              <NavDropdown.Item className='text-dark' href="#action3">Newest</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Oldest
               </NavDropdown.Item>

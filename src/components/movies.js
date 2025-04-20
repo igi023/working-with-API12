@@ -36,8 +36,22 @@ const Movies = () => {
     <>
       <div >
         <form onSubmit={e=>e.preventDefault()}>
-          <input type="text" onInput={e =>SetSearchMovieName(e.currentTarget.value)} />
-          <button onClick={buttonClick} type="button">Search for movie</button>
+        <div className="d-flex justify-content-center align-items-center mt-5">
+            <input 
+              className="mt-3" 
+              type="text" 
+              onInput={e => SetSearchMovieName(e.currentTarget.value)} 
+              placeholder="Search for a movie"
+            />
+            <button 
+              className="mt-3 " 
+              onClick={buttonClick} 
+              type="button"
+            >
+              Search for movie
+            </button>
+          </div>
+
 
           <MovieCard movies={MovieData} />
         </form>
